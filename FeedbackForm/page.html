@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Contact with us...</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <form onsubmit="feedback()">
+                <div class="form-group">
+                    <label for="name" class="control-label">Name</label>
+                    <input class="form-control" type="text" maxlength="32" name="name" pattern="[A-Za-z]{1,32}" required/>
+                </div>
+                <div class="form-group">
+                    <label for="email " class="control-label ">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="me@example.com" required/>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country"></select>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Message</label>
+                    <textarea id="subject" maxlength="500" class="form-control" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input id="buttonid" type="submit" value="Submit" class="btn btn-success btn-sm" onclick="return activateButton()" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="feedback.js"></script>
+    <script src="dropdown.js">
+        return createDropdown()
+    </script>
+    <script src="active.js"></script>
+</body>
+
+</html>
